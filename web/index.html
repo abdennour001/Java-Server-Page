@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supermarket page</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    td, th {
+      text-align: left;
+      padding: 5px;
+    }
+
+    .search-form-input-field {
+      padding: 5px;
+    }
+
+    .search-form-input-button {
+      padding: 5px;
+    }
+
+    .registration-form-input-field {
+      padding: 5px;
+    }
+
+    .registration-form-input-button {
+      padding: 5px;
+    }
+
+  </style>
+</head>
+<body style="font-size: 13px; font-family: sans-serif">
+  <table class="main-layout">
+    <tr>
+      <td>
+        <h1>Supermarket Registration Page</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form name="searchForm" action="/Search" method="get" class="search-form">
+          <table class="search-form-layout">
+            <tr>
+              <td>
+                <h2>Search for Item</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" name="searchInputField" placeholder="search for item..." class="search-form-input-field" autofocus/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" name="searchButton" value="Search" class="search-form-input-button"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form name="registrationForm" action="/Register" method="post" class="registration-form">
+          <table class="registration-form-layout">
+            <tr>
+              <td>
+                <h2>Add an Item</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" name="barCodeField" placeholder="Barcode" class="registration-form-input-field" required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" name="nameField" placeholder="Name" class="registration-form-input-field" required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" name="quantityField" placeholder="Quantity" class="registration-form-input-field" required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="number" name="priceField" placeholder="Price" class="registration-form-input-field" required/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Register" class="registration-form-input-button"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
